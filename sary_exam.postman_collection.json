@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "29ae3655-e031-4658-93ed-12b59afa5917",
+		"name": "sary_exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/user/create_employee/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4MzYyOTkxLCJqdGkiOiJjMmVlZGQ5MWZmM2M0NDdkYjUxMzkxODNlYTgwMmI2ZiIsInVzZXJfaWQiOjJ9.PV9Y4z028BFxCz3dUF7YsbUBErnsZ23KvgwqMDUN9xY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee_number\": 2000,\r\n    \"username\": \"test_employee\",\r\n    \"password\": \"hel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/create_employee/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"create_employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee_number\": 1000,\r\n    \"password\": \"hel211\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/token/refresh/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYyODQ4NDUxOCwianRpIjoiMDgyNmRhYTliZTA3NDYwMGExOTY2ZWI3ZDIwMmVjYjgiLCJ1c2VyX2lkIjoxfQ.d9fccEKlq-EvgghxWfwZ0iWi0Dop8YLrLRuCKyDrBak\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/token/refresh/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/restaurant/tables/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NDAxMTE4LCJqdGkiOiI1MDgyNzA0NGY2MDc0MDIxOTA5Y2VkZTU4MDUxYTFmYyIsInVzZXJfaWQiOjF9.WTJWhzJywjmHM1VSD5ZN-F8MA-Oz5OaQuJajVU9TNmc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table_number\": 12,\r\n    \"table_number_of_seats\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/restaurant/tables/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"tables",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/restaurant/reservation/add_reservation/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NDQxNjk0LCJqdGkiOiIzMDM4MGFiZmQ1NzU0MGQxYmU5NTBiODM2YTA1OTZkZSIsInVzZXJfaWQiOjF9.ACdHFT_KLblaGsWWLH4wb3dwXdZKS7Qgc3_D4PdaKwI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table_number\":2,\r\n    \"reserve_start_time\": \"18:30\",\r\n    \"reserve_end_time\": \"18:50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/restaurant/reservation/add_reservation/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"reservation",
+						"add_reservation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/restaurant/reservation/check_available_time_slots/?required_seats=2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NDQxNjk0LCJqdGkiOiIzMDM4MGFiZmQ1NzU0MGQxYmU5NTBiODM2YTA1OTZkZSIsInVzZXJfaWQiOjF9.ACdHFT_KLblaGsWWLH4wb3dwXdZKS7Qgc3_D4PdaKwI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurant/reservation/check_available_time_slots/?required_seats=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"reservation",
+						"check_available_time_slots",
+						""
+					],
+					"query": [
+						{
+							"key": "required_seats",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/restaurant/reservation/get_today_reservations/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NDQ1NjkzLCJqdGkiOiI4MDJjYjZmZDU4YjM0OTUxYWQ0NjRmMGRkN2U3NDA2YSIsInVzZXJfaWQiOjF9.oqXNgT86AbyM5LKeweXx3ILZXiirJjbIYCZNqJ7QjfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurant/reservation/get_today_reservations/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"reservation",
+						"get_today_reservations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/restaurant/reservation/get_all_reservations/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NDQxNjk0LCJqdGkiOiIzMDM4MGFiZmQ1NzU0MGQxYmU5NTBiODM2YTA1OTZkZSIsInVzZXJfaWQiOjF9.ACdHFT_KLblaGsWWLH4wb3dwXdZKS7Qgc3_D4PdaKwI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurant/reservation/get_all_reservations/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"reservation",
+						"get_all_reservations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/restaurant/reservation/delete_reservation/12/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NDQ1NjkzLCJqdGkiOiI4MDJjYjZmZDU4YjM0OTUxYWQ0NjRmMGRkN2U3NDA2YSIsInVzZXJfaWQiOjF9.oqXNgT86AbyM5LKeweXx3ILZXiirJjbIYCZNqJ7QjfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurant/reservation/delete_reservation/12/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"reservation",
+						"delete_reservation",
+						"12",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/restaurant/tables/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NDQ3MTQ4LCJqdGkiOiI3MjVhMTRlODI4Zjg0NGUxYWM3YTFhNzk3OGI4ZTI4ZSIsInVzZXJfaWQiOjF9.hgX758vHDZUjgiTfD3eJKozrd_Qq40X1I91R4GYZbXU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table_number\": 12,\r\n    \"table_number_of_seats\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/restaurant/tables/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"tables",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
