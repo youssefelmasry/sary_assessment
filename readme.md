@@ -3,16 +3,23 @@
 ## How to start
 * clone the project
 * create a virtualenv
+
+### Run with local setup:
 * setup and create postgresql db with these credentials:
 	1. dbname: sarydb
 	2. dbuser: saryuser
 	3. dbpassword: sarypassword
 * navigate to the main directory which `manage.py` lives
 * install requirements `pip install -r requirements.txt`
-* migrate database `python manage.py migrate`
-* create admin user `python manage.py createsupseruser` 
-* run up the server `python manage.py runserver`
-* to run tests `python manage.py test`
+* migrate database `python manage.py migrate --settings=sary_exam.local-settings`
+* create admin user `python manage.py createsupseruser --settings=sary_exam.local-settings` 
+* run up the server `python manage.py runserver --settings=sary_exam.local-settings`
+* to run tests `python manage.py test --settings=sary_exam.local-settings`
+
+### Run using Docker:
+* install docker and docker-compose
+* run `docker-compose up --build`
+
 
 *P.S*: 
 - You can change Database credentials to whatever you want but make sure to change it in .env file
